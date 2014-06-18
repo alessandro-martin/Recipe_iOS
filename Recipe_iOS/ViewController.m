@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+	self.ingredientsTextView.text = [NSString stringWithFormat:@"Ingredients for Tiramisu:\n\n%@",
+									 [appDelegate.ingredients componentsJoinedByString:@"\n"]];
 }
 
 - (void)didReceiveMemoryWarning

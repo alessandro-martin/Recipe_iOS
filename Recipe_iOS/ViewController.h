@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AppDelegate;
 
 @interface ViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UITextView *ingredientsTextView;
 @end

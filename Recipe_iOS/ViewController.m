@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -19,9 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-	self.ingredientsTextView.text = [NSString stringWithFormat:@"Ingredients for Tiramisu:\n\n%@",
-									 [appDelegate.ingredients componentsJoinedByString:@"\n"]];
+	self.recipe = [[Recipe alloc] init];
+	self.recipe.name = @"Tiramisu";
+	self.recipe.ingredients = @[@"Savoiardi Biscuits", @"Egg Yolks", @"Egg Whites",
+								@"Sugar", @"Mascarpone Cheese", @"Espresso Coffee",
+								@"Cocoa Powder"];
+	self.ingredientsTextView.text = [NSString stringWithFormat:@"Recipe for %@:\n\n%@", self.recipe.name,
+									 [self.recipe.ingredients componentsJoinedByString:@"\n"]];
 }
 
 - (void)didReceiveMemoryWarning

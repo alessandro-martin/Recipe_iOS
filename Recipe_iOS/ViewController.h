@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AppDelegate;
+#import "Recipe.h"
 
 @interface ViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UITextView *ingredientsTextView;
+@property (nonatomic) Recipe *recipe;
 @end

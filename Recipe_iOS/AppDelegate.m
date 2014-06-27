@@ -13,9 +13,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-	self.ingredients = @[@"Savoiardi Biscuits", @"Egg Yolks", @"Egg Whites",
-						 @"Sugar", @"Mascarpone Cheese", @"Espresso Coffee",
-						 @"Cocoa Powder"];
     return YES;
 }
 							

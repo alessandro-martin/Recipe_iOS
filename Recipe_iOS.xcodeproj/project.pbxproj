@@ -21,6 +21,9 @@
 		A779FAA919514E8B00620117 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A779FA8B19514E8B00620117 /* UIKit.framework */; };
 		A779FAB119514E8B00620117 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A779FAAF19514E8B00620117 /* InfoPlist.strings */; };
 		A779FAB319514E8B00620117 /* Recipe_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A779FAB219514E8B00620117 /* Recipe_iOSTests.m */; };
+		A7A4478D195D0B42006E3C33 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A4478C195D0B42006E3C33 /* Recipe.m */; };
+		A7CECE281974A649004DF8BA /* tiramisu.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7CECE271974A649004DF8BA /* tiramisu.plist */; };
+		A7CECE2A1974CF68004DF8BA /* tiramisu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7CECE291974CF68004DF8BA /* tiramisu.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		A779FAAE19514E8B00620117 /* Recipe_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Recipe_iOSTests-Info.plist"; sourceTree = "<group>"; };
 		A779FAB019514E8B00620117 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A779FAB219514E8B00620117 /* Recipe_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe_iOSTests.m; sourceTree = "<group>"; };
+		A7A4478B195D0B42006E3C33 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = Recipe_iOS/Recipe.h; sourceTree = "<group>"; };
+		A7A4478C195D0B42006E3C33 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = Recipe_iOS/Recipe.m; sourceTree = "<group>"; };
+		A7CECE271974A649004DF8BA /* tiramisu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tiramisu.plist; sourceTree = "<group>"; };
+		A7CECE291974CF68004DF8BA /* tiramisu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiramisu.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +119,11 @@
 		A779FA8D19514E8B00620117 /* Recipe_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A779FA9619514E8B00620117 /* AppDelegate.h */,
-				A779FA9719514E8B00620117 /* AppDelegate.m */,
+				A779FA9F19514E8B00620117 /* Images.xcassets */,
 				A779FA9919514E8B00620117 /* Main.storyboard */,
 				A779FA9C19514E8B00620117 /* ViewController.h */,
 				A779FA9D19514E8B00620117 /* ViewController.m */,
-				A779FA9F19514E8B00620117 /* Images.xcassets */,
+				A7CECE2B1974D1EF004DF8BA /* Model */,
 				A779FA8E19514E8B00620117 /* Supporting Files */,
 			);
 			path = Recipe_iOS;
@@ -126,6 +132,10 @@
 		A779FA8E19514E8B00620117 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A779FA9619514E8B00620117 /* AppDelegate.h */,
+				A779FA9719514E8B00620117 /* AppDelegate.m */,
+				A7CECE271974A649004DF8BA /* tiramisu.plist */,
+				A7CECE291974CF68004DF8BA /* tiramisu.jpg */,
 				A779FA8F19514E8B00620117 /* Recipe_iOS-Info.plist */,
 				A779FA9019514E8B00620117 /* InfoPlist.strings */,
 				A779FA9319514E8B00620117 /* main.m */,
@@ -150,6 +160,16 @@
 				A779FAAF19514E8B00620117 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7CECE2B1974D1EF004DF8BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7A4478B195D0B42006E3C33 /* Recipe.h */,
+				A7A4478C195D0B42006E3C33 /* Recipe.m */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +250,9 @@
 			files = (
 				A779FAA019514E8B00620117 /* Images.xcassets in Resources */,
 				A779FA9219514E8B00620117 /* InfoPlist.strings in Resources */,
+				A7CECE281974A649004DF8BA /* tiramisu.plist in Resources */,
 				A779FA9B19514E8B00620117 /* Main.storyboard in Resources */,
+				A7CECE2A1974CF68004DF8BA /* tiramisu.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +274,7 @@
 				A779FA9E19514E8B00620117 /* ViewController.m in Sources */,
 				A779FA9819514E8B00620117 /* AppDelegate.m in Sources */,
 				A779FA9419514E8B00620117 /* main.m in Sources */,
+				A7A4478D195D0B42006E3C33 /* Recipe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +479,7 @@
 				A779FAB819514E8B00620117 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A779FAB919514E8B00620117 /* Build configuration list for PBXNativeTarget "Recipe_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +488,7 @@
 				A779FABB19514E8B00620117 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

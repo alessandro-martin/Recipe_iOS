@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "Recipe.h"
 
-@interface ViewController : UIViewController
-
-@property (strong, nonatomic) IBOutlet UITextView *ingredientsTextView;
-@property (nonatomic) Recipe *recipe;
+@interface ViewController : UIViewController 
 @end

@@ -9,7 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *recipeNameLabel;
+@property (weak, nonatomic) IBOutlet UITableView *ingredientsTable;
+@property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
 
+@property (nonatomic) Recipe *recipe;
 @end
 
 @implementation ViewController
@@ -17,14 +21,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	self.recipe = [[Recipe alloc] init];
-	self.recipe.name = @"Tiramisu";
-	self.recipe.ingredients = @[@"Savoiardi Biscuits", @"Egg Yolks", @"Egg Whites",
-								@"Sugar", @"Mascarpone Cheese", @"Espresso Coffee",
-								@"Cocoa Powder"];
-	self.ingredientsTextView.text = [NSString stringWithFormat:@"Recipe for %@:\n\n%@", self.recipe.name,
-									 [self.recipe.ingredients componentsJoinedByString:@"\n"]];
+	self.recipe = [[Recipe alloc] initWithRecipePlistName:@"tiramisu"];
+
+	self.recipeNameLabel.text = self.recipe.name;
+	self.recipeImage.image = self.recipe.picture;
+	
+	self.ingredientsTable.dataSource = self.recipe;
 }
 
 - (void)didReceiveMemoryWarning

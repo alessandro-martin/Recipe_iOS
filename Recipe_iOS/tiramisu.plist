@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Image</key>
+	<dict>
+		<key>Name</key>
+		<string>tiramisu</string>
+		<key>Extension</key>
+		<string>jpg</string>
+	</dict>
+	<key>Recipe Name</key>
+	<string>Tiramisu</string>
+	<key>Ingredients</key>
+	<array>
+		<string>Savoiardi Biscuits</string>
+		<string>Egg Yolks</string>
+		<string>Egg Whites</string>
+		<string>Sugar</string>
+		<string>Mascarpone Cheese</string>
+		<string>Espresso Coffee</string>
+		<string>Cocoa Powder</string>
+	</array>
+</dict>
+</plist>

@@ -9,9 +9,12 @@
 #import "Recipe.h"
 
 @interface Recipe ()
+
 @property (nonatomic, readwrite) NSString *name;
 @property (nonatomic, readwrite) UIImage *picture;
+
 @property (nonatomic) NSArray *ingredients;
+
 @end
 
 @implementation Recipe

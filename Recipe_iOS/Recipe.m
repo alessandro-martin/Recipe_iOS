@@ -65,8 +65,8 @@ viewForHeaderInSection:(NSInteger)section
 {
 	UIView *header = [[UIView alloc] init];
 	UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, tableView.frame.size.width - 20, 21)];
-	UIFontDescriptor *theFont = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleHeadline];
-	[headerLabel setFont: [UIFont fontWithDescriptor:theFont
+	UIFontDescriptor *theFontDescriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleHeadline];
+	[headerLabel setFont: [UIFont fontWithDescriptor:theFontDescriptor
 												size:18]];
 	[headerLabel setTextAlignment:NSTextAlignmentCenter];
 	headerLabel.text = self.name;

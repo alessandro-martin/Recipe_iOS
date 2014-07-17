@@ -9,9 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *recipeNameLabel;
 @property (weak, nonatomic) IBOutlet UITableView *ingredientsTable;
-@property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
 
 @property (nonatomic) Recipe *recipe;
 @end
@@ -21,12 +19,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
 	self.recipe = [[Recipe alloc] initWithRecipePlistName:@"tiramisu"];
-
-	self.recipeNameLabel.text = self.recipe.name;
-	self.recipeImage.image = self.recipe.picture;
 	
 	self.ingredientsTable.dataSource = self.recipe;
+	self.ingredientsTable.delegate = self.recipe;
 }
 
 - (void)didReceiveMemoryWarning

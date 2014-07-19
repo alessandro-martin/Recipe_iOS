@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "Recipe.h"
 
-@interface ViewController : UIViewController 
+@interface ViewController : UIViewController <UITableViewDelegate>
 @end

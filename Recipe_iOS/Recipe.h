@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Recipe : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface Recipe : NSObject <UITableViewDataSource>
+
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) UIImage *picture;
 
 - (instancetype) initWithRecipePlistName:(NSString *)plistName; // Designated Initializer
 

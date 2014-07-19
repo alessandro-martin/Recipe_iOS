@@ -10,8 +10,8 @@
 
 @interface Recipe ()
 
-@property (nonatomic) NSString *name;
-@property (nonatomic) UIImage *picture;
+@property (nonatomic, readwrite) NSString *name;
+@property (nonatomic, readwrite) UIImage *picture;
 @property (nonatomic) NSArray *ingredients;
 
 @end
@@ -40,6 +40,8 @@
 	return self;
 }
 
+#pragma mark - UITableViewDataSource Methods
+
 - (NSInteger) tableView:(UITableView *)tableView
   numberOfRowsInSection:(NSInteger)section
 {
@@ -58,46 +60,6 @@
 	
     cell.textLabel.text = [self.ingredients objectAtIndex:indexPath.row];
     return cell;
-}
-
-- (UIView *) tableView:(UITableView *) tableView
-viewForHeaderInSection:(NSInteger)section
-{
-	UIView *header = [[UIView alloc] init];
-	UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, tableView.frame.size.width - 20, 21)];
-	UIFontDescriptor *theFontDescriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleHeadline];
-	[headerLabel setFont: [UIFont fontWithDescriptor:theFontDescriptor
-												size:18]];
-	[headerLabel setTextAlignment:NSTextAlignmentCenter];
-	headerLabel.text = self.name;
-	[header addSubview:headerLabel];
-	
-	return header;
-}
-
-- (UIView *) tableView:(UITableView *)tableView
-viewForFooterInSection:(NSInteger)section
-{
-	UIView *footer = [[UIView alloc] init];
-	// Code to resize image
-	CGFloat newWidth = tableView.frame.size.width;
-	CGFloat aspectRatio = (self.picture.size.height / self.picture.size.width);
-	CGFloat newHeight = newWidth * aspectRatio;
-	UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight));
-	[self.picture drawInRect:CGRectMake(0, 0, newWidth, newHeight)];
-	UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	// End of code to resize image
-	UIImageView *pic = [[UIImageView alloc] initWithImage:scaledImage];
-	[footer addSubview:pic];
-		
-	return footer;
-}
-
-- (CGFloat) tableView:(UITableView *)tableView
-heightForHeaderInSection:(NSInteger)section
-{
-	return 41.0f;
 }
 
 @end
